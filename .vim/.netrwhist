@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/hashizumeyuriko/nowlab/bleu_kit2/sample'
+let g:netrw_dirhist_2='/Users/hashizumeyuriko/dip/workspace/data/tweet/personal'
+let g:netrw_dirhist_3='/Users/hashizumeyuriko/.config'
+let g:netrw_dirhist_4='/Users/hashizumeyuriko/nlp/note_tag'
+let g:netrw_dirhist_5='/Users/hashizumeyuriko/nowlab/bash'
+let g:netrw_dirhist_6='/Users/hashizumeyuriko/.vim/bundle/Vundle.vim'
+let g:netrw_dirhist_7='/Users/hashizumeyuriko/.vim'
