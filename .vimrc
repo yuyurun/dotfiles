@@ -86,3 +86,7 @@ augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
   \ exe "normal g`\"" | endif
 augroup END
+" " スクロールあり
+set mouse=a
+" " 背景色
+highlight Normal ctermbg=234 
