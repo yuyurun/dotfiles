@@ -20,6 +20,8 @@ Plug 'srcery-colors/srcery-vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'flrnprz/taffy.vim'
 "Plug 'davidhalter/jedi-vim', {'for': 'python'}   " pythonファイルを編集するときだけ起動
+Plug 'scrooloose/syntastic'
+Plug 'tell-k/vim-autopep8'
 
 call plug#end()
 "syntax enable
@@ -90,3 +92,30 @@ augroup END
 set mouse=a
 " " 背景色
 highlight Normal ctermbg=234 
+" " 自動チェック
+let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+function! Preserve(command)
+    " Save the last search.
+    let search = @/
+    " Save the current cursor position.
+    let cursor_position = getpos('.')
+    " Save the current window position.
+    normal! H
+    let window_position = getpos('.')
+    call setpos('.', cursor_position)
+    " Execute the command.
+    execute a:command
+    " Restore the last search.
+    let @/ = search
+    " Restore the previous window position.
+    call setpos('.', window_position)
+    normal! zt
+    " Restore the previous cursor position.
+    call setpos('.', cursor_position)
+endfunction
+
+function! Autopep8()
+    call Preserve(':silent %!autopep8 -')
+endfunction
+
+autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
