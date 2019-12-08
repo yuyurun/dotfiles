@@ -19,9 +19,10 @@ let g:indent_guides_start_level = 2
 Plug 'srcery-colors/srcery-vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'flrnprz/taffy.vim'
-"Plug 'davidhalter/jedi-vim', {'for': 'python'}   " pythonファイルを編集するときだけ起動
+Plug 'davidhalter/jedi-vim', {'for': 'python'}   " pythonファイルを編集するときだけ起動
 Plug 'scrooloose/syntastic'
 Plug 'tell-k/vim-autopep8'
+"Plug 'mattn/sonictemplete-vim'
 
 call plug#end()
 "syntax enable
@@ -119,3 +120,8 @@ function! Autopep8()
 endfunction
 
 autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
+"
+"
+let g:sonictemplate_vim_template_dir = ['~/.vim/template']
+set clipboard=unnamed,autoselect
+set backspace=indent,eol,start
