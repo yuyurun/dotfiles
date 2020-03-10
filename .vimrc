@@ -125,3 +125,5 @@ autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
 let g:sonictemplate_vim_template_dir = ['~/.vim/template']
 set clipboard=unnamed,autoselect
 set backspace=indent,eol,start
+inoremap { {}<LEFT>
+inoremap ( ()<LEFT>
