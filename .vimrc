@@ -127,3 +127,7 @@ set clipboard=unnamed,autoselect
 set backspace=indent,eol,start
 inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
+inoremap <C-e> <Esc>$a
+inoremap <C-a> <Esc>^a
+noremap <C-e> <Esc>$a
+noremap <C-a> <Esc>^a
