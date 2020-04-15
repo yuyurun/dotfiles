@@ -132,3 +132,7 @@ inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^a
 noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^a
+augroup templateload
+    autocmd!
+    autocmd BufNewFile *.py 0r ~/.vim/template/template.py
+augroup END
