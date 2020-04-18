@@ -22,6 +22,7 @@ Plug 'flrnprz/taffy.vim'
 Plug 'davidhalter/jedi-vim', {'for': 'python'}   " pythonファイルを編集するときだけ起動
 Plug 'scrooloose/syntastic'
 Plug 'tell-k/vim-autopep8'
+Plug 'simeji/winresizer'
 "Plug 'mattn/sonictemplete-vim'
 
 call plug#end()
