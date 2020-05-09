@@ -136,3 +136,7 @@ augroup templateload
     autocmd!
     autocmd BufNewFile *.py 0r ~/.vim/template/template.py
 augroup END
+" " 入力時に補完候補を表示しない
+let g:jedi#popup_on_dot = 0
+" " 補完をctrl+o
+let g:jedi#completions_command = "<C-o>"
