@@ -40,6 +40,7 @@ let g:lightline = {
 
 " colorscheme neuromancer
 "set t_Co=256
+"syntax on
 
 " setting
 " "文字コードをUFT-8に設定
@@ -126,6 +127,8 @@ autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
 let g:sonictemplate_vim_template_dir = ['~/.vim/template']
 set clipboard=unnamed,autoselect
 set backspace=indent,eol,start
+"
+"
 inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
 inoremap [ []<LEFT>
