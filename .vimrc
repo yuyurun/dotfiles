@@ -23,6 +23,7 @@ Plug 'davidhalter/jedi-vim', {'for': 'python'}   " pythonファイルを編集�
 Plug 'scrooloose/syntastic'
 Plug 'tell-k/vim-autopep8'
 Plug 'simeji/winresizer'
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 "Plug 'mattn/sonictemplete-vim'
 
 call plug#end()
@@ -137,3 +138,5 @@ augroup templateload
     autocmd!
     autocmd BufNewFile *.py 0r ~/.vim/template/template.py
 augroup END
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+let g:pydocstring_formatter = 'Google'
