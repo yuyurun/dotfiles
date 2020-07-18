@@ -41,6 +41,7 @@ let g:lightline = {
 
 " colorscheme neuromancer
 "set t_Co=256
+"syntax on
 
 " setting
 " "文字コードをUFT-8に設定
@@ -127,6 +128,8 @@ autocmd FileType python nnoremap <S-f> :call Autopep8()<CR>
 let g:sonictemplate_vim_template_dir = ['~/.vim/template']
 set clipboard=unnamed,autoselect
 set backspace=indent,eol,start
+"
+"
 inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
 inoremap [ []<LEFT>
@@ -140,3 +143,7 @@ augroup templateload
 augroup END
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 let g:pydocstring_formatter = 'Google'
+" " 入力時に補完候補を表示しない
+let g:jedi#popup_on_dot = 0
+" " 補完をctrl+o
+let g:jedi#completions_command = "<C-o>"
